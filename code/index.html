@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr">
+
+<head>
+  <style>
+    p {
+      color: black;
+      font-family: Arial;
+      font-size: 16pt;
+      text-align: center;
+      width: 640px;
+    }
+
+    meter {
+      width: 640px;
+      height: 25px;
+    }
+  </style>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Thesaurus par Guelleh & Gariepy & Kouma</title>
+  <link rel="stylesheet" type="text/css" href="" />
+
+  <script type="text/javascript" src="WebGl.js"></script>
+  <script type="text/javascript" src="ShaderCouleursTextures.js"></script>
+  <script type="text/javascript" src="glMatrix-0.9.5.min.js"></script>
+  <script type="text/javascript" src="Transformations.js"></script>
+  <script type="text/javascript" src="Camera.js"></script>
+  <script type="text/javascript" src="Textures.js"></script>
+  <script type="text/javascript" src="Sol.js"></script>
+  <script type="text/javascript" src="Murs.js"></script>
+  <script type="text/javascript" src="Creneaux.js"></script>
+  <script type="text/javascript" src="init.js"></script>
+  <script type="text/javascript" src="indicateur.js"></script>
+  <script type="text/javascript" src="Ciel.js"></script>
+  <script type="text/javascript" src="Tresor.js"></script>
+  <script type="text/javascript" src="VueEnHaut.js"></script>
+  <script type="text/javascript" src="score.js"></script>
+</head>
+
+<body onload="demarrer();">
+  <canvas id="monCanvas" width="640" height="640" tabIndex="1" , onkeydown="deplacerCamera(); return false">
+    Votre navigateur ne supporte pas la balise canvas
+  </canvas>
+  <br/>
+  <meter id="idMeter" title="Temps Écoulé"></meter>
+
+  <p>
+    <span id="chronotime"></span>
+  </p>
+  <p>
+      <span id="score"> Score : 0</span>
+  </p>
+  <p>
+    <span id ="titreChrono"  style="visibility: hidden; color:blue"> Chronomètre de la vue d'en haut </span>
+  </p>
+  
+</body>
+
+</html>
