@@ -1,4 +1,4 @@
-
+var booInterval = true;
 function revenirSol(camera){
     booVueAir = false;
     booDecremente = false;
@@ -10,7 +10,7 @@ function revenirSol(camera){
     setCibleCameraY(0.5, camera);
     setCibleCameraZ(fltCibleZ, camera);
     //booTemps = false;
-
+    booInterval = false;
     tabObjets3D.shift();
 
     var obj3DCiel = creerObj3DCiel(objgl, TEX_CIEL);
@@ -21,7 +21,12 @@ function vueEnHaut(camera){
     
     booDecremente = true;
     var interval = setInterval(increment, 1000);
-    
+
+    if(!booInterval){
+        clearInterval(interval);
+        booInterval = true;
+    }
+
     booVueAir = true;
     // ORIGINE : (0 ; 0.5 ; 0.5)
     fltPositionX = getPositionCameraX(camera);
